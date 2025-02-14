@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneSwipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container" id="player-container">
+        <div class="music-card" id="music-card">
+            <div class="album-art" id="album-art"></div>
+            <div class="song-info">
+                <h2 id="song-title">Song Title</h2>
+                <p id="song-artist">Artist Name</p>
+            </div>
+            <div class="controls">
+                <button id="prev-button">⏮️</button>
+                <button id="play-button">▶️</button>
+                <button id="pause-button">⏸️</button>
+                <button id="next-button">⏭️</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
