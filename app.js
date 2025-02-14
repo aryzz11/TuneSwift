@@ -9,10 +9,12 @@ const songArtist = document.getElementById('song-artist');
 const albumArt = document.getElementById('album-art');
 const progressBar = document.getElementById('progress-bar');
 
+const repoURL = "https://aryzz11.github.io/TuneSwift/";
+
 const songs = [
-  { title: 'Number 1', artist: 'Artist 1', src: 'songs/number1.mp3', cover: 'images/cover1.jpg' },
-  { title: 'Number 2', artist: 'Artist 2', src: 'songs/number2.mp3', cover: 'images/cover2.jpg' },
-  { title: 'Song 3', artist: 'Artist 3', src: 'songs/song3.mp3', cover: 'images/cover3.jpg' },
+  { title: 'Number 1', artist: 'Artist 1', src: `${repoURL}songs/number1.mp3`, cover: `${repoURL}images/cover1.jpg` },
+  { title: 'Number 2', artist: 'Artist 2', src: `${repoURL}songs/number2.mp3`, cover: `${repoURL}images/cover2.jpg` },
+  { title: 'Song 3', artist: 'Artist 3', src: `${repoURL}songs/song3.mp3`, cover: `${repoURL}images/cover3.jpg` },
 ];
 
 let currentSongIndex = 0;
