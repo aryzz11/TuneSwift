@@ -8,10 +8,11 @@ const songArtist = document.getElementById('song-artist');
 const albumArt = document.getElementById('album-art');
 const musicCard = document.getElementById('music-card');
 
+// Use raw GitHub URLs for songs and cover images
 const songs = [
-  { title: 'Song 1', artist: 'Artist 1', src: 'songs/Number 1.mp3', cover: 'images/cover1.jpg' },
-  { title: 'Song 2', artist: 'Artist 2', src: 'songs/Number 2.mp3', cover: 'images/cover2.jpg' },
-  { title: 'Song 3', artist: 'Artist 3', src: 'songs/song3.mp3', cover: 'images/cover3.jpg' },
+  { title: 'Song 1', artist: 'Artist 1', src: 'https://raw.githubusercontent.com/aryzz11/TuneSwift/main/songs/Number%201.mp3', cover: 'https://raw.githubusercontent.com/aryzz11/TuneSwift/main/images/cover1.jpg' },
+  { title: 'Song 2', artist: 'Artist 2', src: 'https://raw.githubusercontent.com/aryzz11/TuneSwift/main/songs/Number%202.mp3', cover: 'https://raw.githubusercontent.com/aryzz11/TuneSwift/main/images/cover2.jpg' },
+  { title: 'Song 3', artist: 'Artist 3', src: 'https://raw.githubusercontent.com/aryzz11/TuneSwift/main/songs/song3.mp3', cover: 'https://raw.githubusercontent.com/aryzz11/TuneSwift/main/images/cover3.jpg' },
 ];
 
 let currentSongIndex = 0;
@@ -19,10 +20,10 @@ let isAnimating = false;
 
 function loadSong(index) {
   const song = songs[index];
-  audioPlayer.src = encodeURI(song.src);  // Use encodeURI to handle spaces
+  audioPlayer.src = song.src;
   songTitle.textContent = song.title;
   songArtist.textContent = song.artist;
-  albumArt.style.backgroundImage = `url(${encodeURI(song.cover)})`;  // Ensure the cover image URL is encoded
+  albumArt.style.backgroundImage = `url(${song.cover})`;
 }
 
 function playSong() {
